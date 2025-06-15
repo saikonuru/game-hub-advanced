@@ -17,7 +17,7 @@ const PostList = () => {
         value={userId}
         onChange={(event) => setUserId(parseInt(event.target.value))}
       >
-        <option value=""></option>
+        <option value="Select User"></option>
         <option value="1">User 1</option>
         <option value="2">User 2</option>
         <option value="3">User 3</option>
