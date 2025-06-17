@@ -1,5 +1,6 @@
 import { useState } from "react";
-import PostListInfPaging from "./components/PostListInfPaging";
+import TodoForm from "./components/TodoForm";
+import ToDoList from "./components/ToDoList";
 import { Platform } from "./hooks/useGames";
 import { Genre } from "./hooks/useGenres";
 
@@ -12,7 +13,13 @@ export interface GameQuery {
 
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-  return <PostListInfPaging />;
+  return (
+    <>
+      <TodoForm />
+      <ToDoList />
+    </>
+  );
+  // return <PostListInfPaging />;
   // return <PostListPaging />;
   // return <PostList></PostList>;
   // return <ToDoList></ToDoList>;
