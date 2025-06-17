@@ -22,6 +22,7 @@ const TodoForm = () => {
         savedTodo,
         ...(currentTodos || []),
       ]);
+      if (ref.current) ref.current.value = "";
     },
   });
   const ref = useRef<HTMLInputElement>(null);
@@ -54,7 +55,9 @@ const TodoForm = () => {
           />
         </div>
         <div className="col">
-          <button className="btn btn-primary">Add Todo</button>
+          <button disabled={addTodo.isLoading} className="btn btn-primary">
+            {addTodo.isLoading ? "Adding..." : "Add Todo"}
+          </button>
         </div>
       </form>
     </>
