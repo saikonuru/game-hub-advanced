@@ -4,7 +4,7 @@ const axiosInstance = axios.create({
   baseURL: "https://jsonplaceholder.typicode.com",
 });
 
-class APIClient<T> {
+class ToDoAPIClient<T> {
   endPoint: string;
   constructor(endPoint: string) {
     this.endPoint = endPoint;
@@ -20,4 +20,4 @@ class APIClient<T> {
   };
 }
 
-export default APIClient;
+export default ToDoAPIClient;
