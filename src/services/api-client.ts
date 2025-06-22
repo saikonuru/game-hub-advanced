@@ -1,4 +1,8 @@
 import axios from "axios";
+export interface FetchResponse<T> {
+  count: number;
+  results: T[];
+}
 
 export default axios.create({
   baseURL: "https://api.rawg.io/api",
@@ -7,24 +11,4 @@ export default axios.create({
   },
 });
 
-// const axiosInstance = axios.create({
-//   baseURL: "https://jsonplaceholder.typicode.com",
-// });
 
-// class APIClient<T> {
-//   endPoint: string;
-//   constructor(endPoint: string) {
-//     this.endPoint = endPoint;
-//   }
-
-//   getAll = async () => {
-//     return axiosInstance.get<T[]>(this.endPoint).then((res) => res.data);
-//   };
-
-//   post = async (data: T) => {
-//     const res = await axiosInstance.post<T>(this.endPoint, data);
-//     return res.data;
-//   };
-// }
-
-// export default APIClient;
