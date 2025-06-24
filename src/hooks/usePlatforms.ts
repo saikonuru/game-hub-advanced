@@ -12,7 +12,7 @@ const apiClient = new ApiClient<Platform>("/platforms/lists/parents");
 const usePlatforms = () =>
   useQuery(["platforms"], () => apiClient.getAll({}), {
     staleTime: 24 * 60 * 60 * 1000, // 24-HR
-    initialData: { count: platforms.length, next: null, results: platforms },
+    initialData: platforms,
   });
 
 export default usePlatforms;

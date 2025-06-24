@@ -12,7 +12,7 @@ const apiClient = new ApiClient<Genre>("/genres");
 const useGenres = () =>
   useQuery(["genres"], () => apiClient.getAll({}), {
     staleTime: 24 * 60 * 60 * 1000, // 24-HR
-    initialData: { count: genres.length, next: null, results: genres },
+    initialData: genres,
   });
 
 export default useGenres;
