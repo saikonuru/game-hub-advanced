@@ -11,11 +11,12 @@ const GameHeading = ({ gameQuery }: Props) => {
   const genre = useGenre(gameQuery?.genreId);
   const platform = usePlatform(gameQuery?.platformId);
 
-  const heading: string = (platform?.name || "") + " " + (genre?.name || "") + " Games";
+  const heading: string =
+    (platform?.name || "") + " " + (genre?.name || "") + " Games";
 
   return (
     <Heading as="h1" marginY={5} fontSize="5xl">
-      {String(heading)}
+      {heading as string}
     </Heading>
   );
 };
