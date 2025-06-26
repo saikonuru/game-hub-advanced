@@ -1,4 +1,4 @@
-import TaskList from "./state-management/TaskList";
+import LoginStatus from "./state-management/LoginStatus";
 
 export interface GameQuery {
   genreId?: number;
@@ -10,7 +10,7 @@ export interface GameQuery {
 function App() {
   return (
     <>
-      <TaskList />
+      <LoginStatus />
     </>
   );
   // return <PostListInfPaging />;

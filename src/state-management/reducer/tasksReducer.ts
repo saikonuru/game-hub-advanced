@@ -25,13 +25,13 @@ interface ClearTasks {
 
 type TaskAction = AddTask | DeleteTask | ClearTasks;
 
-const tasksReducer = (tasks: Task[], action: TaskAction): Task[] => {
-  switch (action.type) {
+const tasksReducer = (tasks: Task[], taskAction: TaskAction): Task[] => {
+  switch (taskAction.type) {
     case TaskActionType.ADD:
-      tasks = [action.task, ...tasks];
+      tasks = [taskAction.task, ...tasks];
       break;
     case TaskActionType.DELETE:
-      tasks = tasks.filter((t) => t.id != action.taskId);
+      tasks = tasks.filter((t) => t.id != taskAction.taskId);
       break;
     case TaskActionType.CLEAR:
       tasks = [];
