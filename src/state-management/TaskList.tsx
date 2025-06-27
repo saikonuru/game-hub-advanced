@@ -1,10 +1,10 @@
-import { useReducer } from "react";
+import { useContext } from "react";
+import TasksContext from "./contexts/tasksContext";
 import type { Task } from "./reducer/tasksReducer";
-import tasksReducer, { TaskActionType } from "./reducer/tasksReducer";
+import { TaskActionType } from "./reducer/tasksReducer";
 
 const TaskList = () => {
-  const [tasks, dispatch] = useReducer(tasksReducer, []);
-
+  const { tasks, dispatch } = useContext(TasksContext);
   return (
     <>
       <div

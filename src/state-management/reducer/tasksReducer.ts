@@ -23,7 +23,7 @@ interface ClearTasks {
   type: TaskActionType.CLEAR;
 }
 
-type TaskAction = AddTask | DeleteTask | ClearTasks;
+export type TaskAction = AddTask | DeleteTask | ClearTasks;
 
 const tasksReducer = (tasks: Task[], taskAction: TaskAction): Task[] => {
   switch (taskAction.type) {
