@@ -1,8 +1,8 @@
-import { useReducer } from "react";
-import authReducer, { AuthActionType } from "./reducer/authReducer";
+import useAuth from "../hooks/useAuth";
+import { AuthActionType } from "./reducer/authReducer";
 
 const LoginStatus = () => {
-  const [user, dispatch] = useReducer(authReducer, "");
+  const { user, dispatch } = useAuth();
 
   if (user)
     return (

@@ -1,8 +1,7 @@
-import { useReducer } from "react";
-import TasksContext from "./state-management/contexts/tasksContext";
+import AuthProvider from "./state-management/AuthProvider";
 import HomePage from "./state-management/HomePage";
 import NavBar from "./state-management/NavBar";
-import tasksReducer from "./state-management/reducer/tasksReducer";
+import { TaskProvider } from "./state-management/tasks/";
 
 export interface GameQuery {
   genreId?: number;
@@ -12,12 +11,13 @@ export interface GameQuery {
 }
 
 function App() {
-  const [tasks, dispatch] = useReducer(tasksReducer, []);
   return (
-    <TasksContext.Provider value={{ tasks, dispatch }}>
-      <NavBar />
-      <HomePage />
-    </TasksContext.Provider>
+    <AuthProvider>
+      <TaskProvider>
+        <NavBar />
+        <HomePage />
+      </TaskProvider>
+    </AuthProvider>
   );
   // return <PostListInfPaging />;
   // return <PostListPaging />;
