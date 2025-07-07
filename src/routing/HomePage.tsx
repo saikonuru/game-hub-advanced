@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
+  throw new DOMException("Opps, some exception");
   return (
     <>
       <p>
