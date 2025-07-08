@@ -7,7 +7,8 @@ import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { RouterProvider } from "react-router-dom";
 import "./index.css";
-import router from "./routing/routes";
+
+import router from "./routes";
 import theme from "./theme";
 const queryClient = new QueryClient({
   defaultOptions: {
