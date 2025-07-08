@@ -6,6 +6,8 @@ import PlatformSelector from "../components/PlatformSelector";
 import SortSelector from "../components/SortSelector";
 
 const HomePage = () => {
+  // throw new Error("test exception");
+
   return (
     <Grid
       templateAreas={{
