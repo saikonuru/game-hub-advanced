@@ -1,20 +1,10 @@
 import { SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import useGames from "../hooks/useGames";
+import useGames, { Game } from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import GameCardSkeleton from "./GameCardSkeleton";
-
-interface Game {
-  id: number;
-  key: string;
-  name: string;
-  background_image: string;
-  parent_platforms: { platform: { id: number; name: string; slug: string } }[];
-  metacritic: number;
-  rating_top: number;
-}
 
 interface GamePage {
   results: Game[];
