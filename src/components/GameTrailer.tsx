@@ -17,7 +17,7 @@ const GameTrailer = ({ gameId }: Props) => {
       poster={firstTrailer.preview}
       controls
     />
-  ) : (
+  ) : ( 
     <h3>No trailers found!</h3>
   );
 };
